@@ -28,3 +28,4 @@ obj/
 Packages/
 _ReSharper*/
 [Tt]est[Rr]esult*
+Ronnbaret.Web/App_Data/Logs/UmbracoTraceLog.txt

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+  <Name>Designit Green</Name>
+  <Author>Designit A/S</Author>
+  <Version>1.0</Version>
+  <Description><![CDATA[Designit Green sample skin for umbraco Starter Kit]]></Description>
+  <AllowedRootTemplate>umbHomepage</AllowedRootTemplate>
+  <Dependencies>
+    <Dependency type="Text" label="Footer Text">
+      <Properties>
+        <Output>Footer</Output>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyTemplate">
+          <TargetFile>umbMaster.master</TargetFile>
+          <TargetID>footer_text</TargetID>
+          <Value>${Output}</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+    <Dependency type="Image" label="Top Image">
+      <Properties>
+        <Output>
+        </Output>
+        <Height>222</Height>
+        <Width>662</Width>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyCss">
+          <TargetFile>Designit_Green.css</TargetFile>
+          <TargetRule>#siteDescription</TargetRule>
+          <TargetParameter>background</TargetParameter>
+          <Value>url( ${Output} ) no-repeat</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+    <Dependency type="Image" label="Logo">
+      <Properties>
+        <Output>
+        </Output>
+        <Height>119</Height>
+        <Width>117</Width>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyCss">
+          <TargetFile>Designit_Green.css</TargetFile>
+          <TargetRule>#siteName a</TargetRule>
+          <TargetParameter>background-image</TargetParameter>
+          <Value>url( ${Output} )</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+  </Dependencies>
+  <History>
+    <Task type="ModifyTemplate" executed="2013-05-17T10:43:23">
+      <TargetFile>umbMaster.master</TargetFile>
+      <TargetID>footer_text</TargetID>
+      <TargetAttribute>
+      </TargetAttribute>
+      <Value>${Output}</Value>
+      <OriginalValue>&lt;strong&gt;runway&lt;/strong&gt; &lt;span&gt;Runners Blvd. 245&lt;/span&gt; &lt;span&gt;Runningville&lt;/span&gt;</OriginalValue>
+      <NewValue>Footer</NewValue>
+    </Task>
+    <Task type="ModifyCss" executed="2013-05-17T10:43:23">
+      <TargetFile>Designit_Green.css</TargetFile>
+      <TargetRule>#siteDescription</TargetRule>
+      <TargetParameter>background</TargetParameter>
+      <Value>url( ${Output} ) no-repeat</Value>
+      <OriginalValue>
+      </OriginalValue>
+      <NewValue>url(  ) no-repeat</NewValue>
+    </Task>
+    <Task type="ModifyCss" executed="2013-05-17T10:43:23">
+      <TargetFile>Designit_Green.css</TargetFile>
+      <TargetRule>#siteName a</TargetRule>
+      <TargetParameter>background-image</TargetParameter>
+      <Value>url( ${Output} )</Value>
+      <OriginalValue>
+      </OriginalValue>
+      <NewValue>url(  )</NewValue>
+    </Task>
+  </History>
+</Skin>
